@@ -9,6 +9,9 @@ import axios from 'axios';
 import { Url } from '../../../Utils/Url';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import high from '../../../Assets/high.svg';
+import moderate from '../../../Assets/moderate.svg';
+import low from '../../../Assets/low.svg';
 
 const AddModalElementEdit = ({ taskId }) => {
     const baseUrl = Url();
@@ -149,21 +152,21 @@ const AddModalElementEdit = ({ taskId }) => {
                             className={selectedPriority === "HIGH PRIORITY" ? StylesAddModalElementEdit.addPriorityColor : StylesAddModalElementEdit.addPriority}
                             onClick={() => handlePriorityClick("HIGH PRIORITY")}
                         >
-                            <img src='Assets/high.svg' alt='addPriority' />&nbsp;&nbsp;HIGH PRIORITY
+                            <img src={high} alt='addPriority' />&nbsp;&nbsp;HIGH PRIORITY
                         </button>
                         <button
                             value="MODERATE PRIORITY"
                             className={selectedPriority === "MODERATE PRIORITY" ? StylesAddModalElementEdit.addPriorityColor : StylesAddModalElementEdit.addPriority}
                             onClick={() => handlePriorityClick("MODERATE PRIORITY")}
                         >
-                            <img src='Assets/moderate.svg' alt='addPriority' />&nbsp;&nbsp;MODERATE PRIORITY
+                            <img src={moderate} alt='addPriority' />&nbsp;&nbsp;MODERATE PRIORITY
                         </button>
                         <button
                             value="LOW PRIORITY"
                             className={selectedPriority === "LOW PRIORITY" ? StylesAddModalElementEdit.addPriorityColor : StylesAddModalElementEdit.addPriority}
                             onClick={() => handlePriorityClick("LOW PRIORITY")}
                         >
-                            <img src='Assets/low.svg' alt='addPriority' />&nbsp;&nbsp;LOW PRIORITY
+                            <img src={low} alt='addPriority' />&nbsp;&nbsp;LOW PRIORITY
                         </button>
                     </div>
                 </div>

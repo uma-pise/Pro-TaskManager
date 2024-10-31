@@ -4,6 +4,7 @@ import StylesAnalytics from './Analytics.module.css';
 import { Url } from '../../../Utils/Url';
 import { useDispatch } from 'react-redux';
 import { toggleLoader } from '../../../Redux/slice';
+import analyticsCircle from '../../../Assets/analyticsCircle.png';
 
 const Analytics = () => {
     const baseUrl = Url();
@@ -49,24 +50,24 @@ const Analytics = () => {
                 <div style={{ display: 'flex', gap: '31px' }}>
                     <div className={StylesAnalytics.colorBlue}>
                         <div>
-                            <div style={{ display: 'flex', gap: '11px' }}><img src='Assets/analyticsCircle.svg' alt='analyticsCircle' /><span style={{ display: 'flex', gap: '211px' }}><span className={StylesAnalytics.anTitle}>Backlog Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.backlogTasks}</span></span></div>
+                            <div style={{ display: 'flex', gap: '11px'}}><img src={analyticsCircle} alt='analyticsCircle' style={{ width: '10px', height: '15px' }} /><span style={{ display: 'flex', gap: '211px' }}><span className={StylesAnalytics.anTitle}>Backlog Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.backlogTasks}</span></span></div>
                             <br />
-                            <div style={{ display: 'flex', gap: '11px' }}><img src='Assets/analyticsCircle.svg' alt='analyticsCircle' /><span style={{ display: 'flex', gap: '226px' }}><span className={StylesAnalytics.anTitle}>To-do Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.todoTasks}</span></span></div>
+                            <div style={{ display: 'flex', gap: '11px' }}><img src={analyticsCircle} alt='analyticsCircle' style={{ width: '10px', height: '15px' }} /><span style={{ display: 'flex', gap: '226px' }}><span className={StylesAnalytics.anTitle}>To-do Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.todoTasks}</span></span></div>
                             <br />
-                            <div style={{ display: 'flex', gap: '11px' }}><img src='Assets/analyticsCircle.svg' alt='analyticsCircle' /><span style={{ display: 'flex', gap: '187px' }}><span className={StylesAnalytics.anTitle}>In-Progress Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.inProgressTasks}</span></span></div>
+                            <div style={{ display: 'flex', gap: '11px' }}><img src={analyticsCircle} alt='analyticsCircle' style={{ width: '10px', height: '15px' }} /><span style={{ display: 'flex', gap: '187px' }}><span className={StylesAnalytics.anTitle}>In-Progress Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.inProgressTasks}</span></span></div>
                             <br />
-                            <div style={{ display: 'flex', gap: '11px' }}><img src='Assets/analyticsCircle.svg' alt='analyticsCircle' /><span style={{ display: 'flex', gap: '189px' }}><span className={StylesAnalytics.anTitle}>Completed Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.completedTasks}</span></span></div>
+                            <div style={{ display: 'flex', gap: '11px' }}><img src={analyticsCircle} alt='analyticsCircle' style={{ width: '10px', height: '15px' }} /><span style={{ display: 'flex', gap: '189px' }}><span className={StylesAnalytics.anTitle}>Completed Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.completedTasks}</span></span></div>
                         </div>
                     </div>
                     <div className={StylesAnalytics.colorBlue}>
                         <div>
-                            <div style={{ display: 'flex', gap: '11px' }}><img src='Assets/analyticsCircle.svg' alt='analyticsCircle' /><span style={{ display: 'flex', gap: '211px' }}><span className={StylesAnalytics.anTitle}>Low Priority</span> <span className={StylesAnalytics.anNo}>{analyticsData.lowPriorityTasks}</span></span></div>
+                            <div style={{ display: 'flex', gap: '11px' }}><img src={analyticsCircle} alt='analyticsCircle' style={{ width: '10px', height: '15px' }} /><span style={{ display: 'flex', gap: '211px' }}><span className={StylesAnalytics.anTitle}>Low Priority</span> <span className={StylesAnalytics.anNo}>{analyticsData.lowPriorityTasks}</span></span></div>
                             <br />
-                            <div style={{ display: 'flex', gap: '11px' }}><img src='Assets/analyticsCircle.svg' alt='analyticsCircle' /><span style={{ display: 'flex', gap: '178px' }}><span className={StylesAnalytics.anTitle}>Moderate Priority</span> <span className={StylesAnalytics.anNo}>{analyticsData.moderatePriorityTasks}</span></span></div>
+                            <div style={{ display: 'flex', gap: '11px' }}><img src={analyticsCircle} alt='analyticsCircle' style={{ width: '10px', height: '15px' }} /><span style={{ display: 'flex', gap: '178px' }}><span className={StylesAnalytics.anTitle}>Moderate Priority</span> <span className={StylesAnalytics.anNo}>{analyticsData.moderatePriorityTasks}</span></span></div>
                             <br />
-                            <div style={{ display: 'flex', gap: '11px' }}><img src='Assets/analyticsCircle.svg' alt='analyticsCircle' /><span style={{ display: 'flex', gap: '211px' }}><span className={StylesAnalytics.anTitle}>High Priority</span> <span className={StylesAnalytics.anNo}>{analyticsData.highPriorityTasks}</span></span></div>
+                            <div style={{ display: 'flex', gap: '11px' }}><img src={analyticsCircle} alt='analyticsCircle' style={{ width: '10px', height: '15px' }} /><span style={{ display: 'flex', gap: '211px' }}><span className={StylesAnalytics.anTitle}>High Priority</span> <span className={StylesAnalytics.anNo}>{analyticsData.highPriorityTasks}</span></span></div>
                             <br />
-                            <div style={{ display: 'flex', gap: '11px' }}><img src='Assets/analyticsCircle.svg' alt='analyticsCircle' /><span style={{ display: 'flex', gap: '195px' }}><span className={StylesAnalytics.anTitle}>Due Date Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.dueDateTasks}</span></span></div>
+                            <div style={{ display: 'flex', gap: '11px' }}><img src={analyticsCircle} alt='analyticsCircle' style={{ width: '10px', height: '15px' }} /><span style={{ display: 'flex', gap: '195px' }}><span className={StylesAnalytics.anTitle}>Due Date Tasks</span> <span className={StylesAnalytics.anNo}>{analyticsData.dueDateTasks}</span></span></div>
                         </div>
                     </div>
                 </div>

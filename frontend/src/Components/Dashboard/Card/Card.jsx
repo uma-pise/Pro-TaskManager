@@ -6,6 +6,11 @@ import { Url } from '../../../Utils/Url';
 import { useDispatch } from 'react-redux';
 import { toggleBoardSwitch, toggleToastyAction, toggleLoader, openModal2, setTaskId } from '../../../Redux/slice';
 import Modal from 'react-responsive-modal';
+import high from '../../../Assets/high.svg';
+import moderate from '../../../Assets/moderate.svg';
+import low from '../../../Assets/low.svg';
+import dot from '../../../Assets/3dots.png';
+
 
 const Card = ({ priority, title, checklist, myTaskId, serverFetchedDate, collasped }) => {
 
@@ -23,13 +28,13 @@ const Card = ({ priority, title, checklist, myTaskId, serverFetchedDate, collasp
     const img = () => {
         switch (priority) {
             case 'HIGH PRIORITY':
-                imgSrc = 'Assets/high.svg';
+                imgSrc = {high};
                 break;
             case 'MODERATE PRIORITY':
-                imgSrc = 'Assets/moderate.svg';
+                imgSrc = {moderate};
                 break;
             default:
-                imgSrc = 'Assets/low.svg';
+                imgSrc = {low};
         }
     };
 
@@ -248,10 +253,10 @@ const Card = ({ priority, title, checklist, myTaskId, serverFetchedDate, collasp
             {console.log("collasped========", collasped)}
             <div className={StylesCard.card}>
                 <div className={StylesCard.priorityText} style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <div><img src={imgSrc} alt='high' />&nbsp;&nbsp;{priority}</div>
+                    <div><img src={high} alt='high' />&nbsp;&nbsp;{priority}</div>
                     <div style={{ position: 'relative', display: 'inline-block' }}>
                         <span>
-                            <img src='Assets/3dot.svg' alt='3dot' style={{ position: 'absolute', right: '11px', paddingTop: '11px', paddingBottom: '15px', paddingLeft: '15px', paddingRight: '7px' }} onClick={toggleOverlay} />
+                            <img src= {dot} alt='3dot' style={{ position: 'absolute', right: '11px', paddingTop: '11px', paddingBottom: '15px', paddingLeft: '15px', paddingRight: '7px' }} onClick={toggleOverlay} />
                         </span>
                         {showOverlay && (
                             <div className={StylesCard.dropDown} style={{ display: 'flex', flexDirection: 'column', gap: '11px' }}>

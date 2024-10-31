@@ -1,5 +1,7 @@
 import React from 'react';
 import StylesModalTaskList from './ModalTaskList.module.css';
+import AddButton from '../../../Assets/AddButton.png';
+import Delete from '../../../Assets/Delete.png';
 
 const ModalTaskList = ({ checklists, setChecklists, onTaskCheck, onTaskDelete }) => {
 
@@ -65,13 +67,13 @@ const ModalTaskList = ({ checklists, setChecklists, onTaskCheck, onTaskDelete })
             className={StylesModalTaskList.inputTask}
           />
           <button className={StylesModalTaskList.deleteButton} onClick={() => handleDeleteClick(checklist.id)}>
-            <img src="Assets/delete.svg" alt="delete" />
+            <img src={Delete} alt="delete" />
           </button>
         </div>
       ))}
       <br/>
       <div className={StylesModalTaskList.addButton} onClick={handleAddNewClick}>
-        <img src='Assets/AddButton.svg' alt='AddButton' />&nbsp;&nbsp;Add New
+        <img src={AddButton} alt='AddButton' />&nbsp;&nbsp;Add New
       </div>
     </>
   );
